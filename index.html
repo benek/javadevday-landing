@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<title>TITLE</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CPoppins:400,500" rel="stylesheet">
+	<link href="common-css/bootstrap.css" rel="stylesheet">
+	<link href="common-css/ionicons.css" rel="stylesheet">
+	<link rel="stylesheet" href="common-css/jquery.classycountdown.css" />
+	<link href="javadevday-landing/css/styles.css" rel="stylesheet">
+	<link href="javadevday-landing/css/responsive.css" rel="stylesheet">
+</head>
+<body>
+	<div class="main-area">
+		<div class="container full-height position-static">
+			<section class="left-section full-height">
+				<div class="display-table">
+					<div class="display-table-cell">
+						<div class="main-content">
+                            <h1 class="title"><b>Save the date!</b></h1>
+                            <div id="rounded-countdown">
+                                <div id="countdown" class="countdown"></div>
+                            </div>
+                            <br/>
+                            <p>¡El evento m&aacute;s grande de Java en M&eacute;xico est&aacute; a s&oacute;lo
+                                unos d&iacute;as!</p>
+                            <br/>
+                            <p>Con ponentes nacionales e internacionales y el mejor contenido hasta la fecha
+                                en M&eacute;xico, no te puedes perder esta oportunidad.</p>
+							<br/>
+                            <p>De la comunidad, para la comunidad.</p>
+                            <br>
+                            <p><a href="https://www.eventbrite.com/e/java-dev-day-2018-tickets-48148332960"
+                                  target="_blank" title="Entradas disponibles">
+                                <strong>Entradas disponibles aquí.</strong>
+                            </a></p>
+							<br/>
+                        </div>
+					</div>
+				</div>
+
+                <ul class="footer-icons">
+					<li><strong>Septiembre 22, Centraal Bosch, Guadalajara, MX.</strong></li><br/>
+					<li>S&iacute;guenos: </li>
+					<li><a href="#"><i class="ion-social-facebook"></i></a></li>
+					<li><a href="#"><i class="ion-social-twitter"></i></a></li>
+					<li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+					<li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+					<li><a href="#"><i class="ion-social-pinterest"></i></a></li>
+				</ul>
+		
+			</section>
+		
+			<section class="right-section" style="background-image: url(images/jdd2018.png);
+			background-size: 70%; background-repeat: no-repeat; background-position: center;">
+			</section>
+		
+		</div>
+
+        <script src="common-js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript">
+            //Para obtener los segundos restantes entre la fecha y hoy
+            var eventDate = new Date(2018, 8, 22, 9, 0, 0, 0);
+            var today = new Date();
+            var remainingSeconds = (eventDate.getTime() / 1000) - (today.getTime() / 1000);
+            //Pasando segundos al countdown
+            $('[id$=countdown]').attr("data-remaining-sec", ~~remainingSeconds);
+        </script>
+        <script src="common-js/tether.min.js"></script>
+        <script src="common-js/bootstrap.js"></script>
+        <script src="common-js/jquery.classycountdown.js"></script>
+        <script src="common-js/jquery.knob.js"></script>
+        <script src="common-js/jquery.throttle.js"></script>
+        <script src="common-js/scripts.js"></script>
+    </div>
+</body>
+</html>
